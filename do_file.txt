@@ -16,6 +16,7 @@ Account pages
 	username
 	email
 	password
+	im number
 Dashboard pages
 Print pages
 Lost pages
