@@ -1,0 +1,15 @@
+Home pages
+Login pages
+    mail address
+    username
+    phone number
+    password
+        on error
+            print error
+        lost
+
+Account pages
+Dashboard pages
+Print pages
+Lost pages
+Statistiques
