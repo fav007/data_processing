@@ -1,7 +1,7 @@
-Home pages
+Home pages (Mbolatiana)
     login 
     sign up
-Login pages
+Login pages(Franco)
     mail address
     username
     phone number
