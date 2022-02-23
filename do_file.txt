@@ -11,6 +11,11 @@ Login pages
         lost
 
 Account pages
+	firstname
+	lastname
+	username
+	email
+	password
 Dashboard pages
 Print pages
 Lost pages
