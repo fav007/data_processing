@@ -1,4 +1,6 @@
 Home pages
+    login 
+    sign up
 Login pages
     mail address
     username
