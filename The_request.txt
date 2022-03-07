@@ -1,0 +1,8 @@
+Pour les délais
+=> SELECT (hour(timediff(`Fin Traitement`,`Date Disponibilité`))*60+minute(timediff(`Fin Traitement`,`Date Disponibilité`))+second(timediff(`Fin Traitement`,`Date Disponibilité`))/60) FROM `data`
+
+Pour les délais(moyenne)
+=> SELECT avg(hour(timediff(`Fin Traitement`,`Date Disponibilité`))*60+minute(timediff(`Fin Traitement`,`Date Disponibilité`))+second(timediff(`Fin Traitement`,`Date Disponibilité`))/60) FROM `data`
+
+Pour les délais(moyenne) par MOIS
+=> SELECT avg(hour(timediff(`Fin Traitement`,`Date Disponibilité`))*60+minute(timediff(`Fin Traitement`,`Date Disponibilité`))+second(timediff(`Fin Traitement`,`Date Disponibilité`))/60) FROM `data` WHERE Mois="-(mois)-"
