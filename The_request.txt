@@ -6,3 +6,74 @@ Pour les délais(moyenne)
 
 Pour les délais(moyenne) par MOIS
 => SELECT avg(hour(timediff(`Fin Traitement`,`Date Disponibilité`))*60+minute(timediff(`Fin Traitement`,`Date Disponibilité`))+second(timediff(`Fin Traitement`,`Date Disponibilité`))/60) FROM `data` WHERE Mois="-(mois)-"
+
+//Date Disponibilité
+D0 : (Date Disponibilité et Début Traitement)
+=> SELECT avg(hour(timediff(`Début Traitement`,`Date Disponibilité`))*60+minute(timediff(`Début Traitement`,`Date Disponibilité`))+second(timediff(`Début Traitement`,`Date Disponibilité`))/60) FROM `data`
+
+D1 : (Date Disponibilité et Date pré ciblage)
+=> SELECT avg(hour(timediff(`Date pré ciblage`,`Date Disponibilité`))*60+minute(timediff(`Date pré ciblage`,`Date Disponibilité`))+second(timediff(`Date pré ciblage`,`Date Disponibilité`))/60) FROM `data`
+
+D2 : (Date Disponibilité et Début Traitement pré ciblé)
+=> SELECT avg(hour(timediff(`Début Traitement pré ciblé`,`Date Disponibilité`))*60+minute(timediff(`Début Traitement pré ciblé`,`Date Disponibilité`))+second(timediff(`Début Traitement pré ciblé`,`Date Disponibilité`))/60) FROM `data`
+
+D3 : (Date Disponibilité et Début Traitement Réel)
+=> SELECT avg(hour(timediff(`Début Traitement Réel`,`Date Disponibilité`))*60+minute(timediff(`Début Traitement Réel`,`Date Disponibilité`))+second(timediff(`Début Traitement Réel`,`Date Disponibilité`))/60) FROM `data`
+
+D4 : (Date Disponibilité et Fin Traitement)
+=> SELECT avg(hour(timediff(`Fin Traitement`,`Date Disponibilité`))*60+minute(timediff(`Fin Traitement`,`Date Disponibilité`))+second(timediff(`Fin Traitement`,`Date Disponibilité`))/60) FROM `data`
+
+//Début Traitement
+D5 : (Début Traitement et Date pré ciblage)
+=> SELECT avg(hour(timediff(`Date pré ciblage`,`Début Traitement`))*60+minute(timediff(`Date pré ciblage`,`Début Traitement`))+second(timediff(`Date pré ciblage`,`Début Traitement`))/60) FROM `data`
+
+D6 : (Début Traitement et Début Traitement pré ciblé)
+=> SELECT avg(hour(timediff(`Début Traitement pré ciblé`,`Début Traitement`))*60+minute(timediff(`Début Traitement pré ciblé`,`Début Traitement`))+second(timediff(`Début Traitement pré ciblé`,`Début Traitement`))/60) FROM `data`
+
+D7 : (Début Traitement et Début Traitement Réel)
+=> SELECT avg(hour(timediff(`Début Traitement Réel`,`Début Traitement`))*60+minute(timediff(`Début Traitement Réel`,`Début Traitement`))+second(timediff(`Début Traitement Réel`,`Début Traitement`))/60) FROM `data`
+
+D8 : (Début Traitement et Fin Traitement)
+=> SELECT avg(hour(timediff(`Fin Traitement`,`Début Traitement`))*60+minute(timediff(`Fin Traitement`,`Début Traitement`))+second(timediff(`Fin Traitement`,`Début Traitement`))/60) FROM `data`
+
+
+//Date pré ciblage
+D9 : (Date pré ciblage et Début Traitement pré ciblé)
+=> SELECT avg(hour(timediff(`Début Traitement pré ciblé`,`Date pré ciblage`))*60+minute(timediff(`Début Traitement pré ciblé`,`Date pré ciblage`))+second(timediff(`Début Traitement pré ciblé`,`Date pré ciblage`))/60) FROM `data`
+
+D10 : (Date pré ciblage et Début Traitement Réel)
+=> SELECT avg(hour(timediff(`Début Traitement Réel`,`Date pré ciblage`))*60+minute(timediff(`Début Traitement Réel`,`Date pré ciblage`))+second(timediff(`Début Traitement Réel`,`Date pré ciblage`))/60) FROM `data`
+
+D11 : (Date pré ciblage et Fin Traitement)
+=> SELECT avg(hour(timediff(`Fin Traitement`,`Date pré ciblage`))*60+minute(timediff(`Fin Traitement`,`Date pré ciblage`))+second(timediff(`Fin Traitement`,`Début Traitement`))/60) FROM `data`
+
+
+//Début Traitement pré ciblé
+D12 : (Début Traitement pré ciblé et Début Traitement Réel)
+=> SELECT avg(hour(timediff(`Début Traitement Réel`,`Début Traitement pré ciblé`))*60+minute(timediff(`Début Traitement Réel`,`Début Traitement pré ciblé`))+second(timediff(`Début Traitement Réel`,`Début Traitement pré ciblé`))/60) FROM `data`
+
+D13 : (Début Traitement pré ciblé et Fin Traitement)
+=> SELECT avg(hour(timediff(`Fin Traitement`,`Début Traitement pré ciblé`))*60+minute(timediff(`Fin Traitement`,`Début Traitement pré ciblé`))+second(timediff(`Fin Traitement`,`Début Traitement pré ciblé`))/60) FROM `data`
+
+
+//Début Traitement Réel
+D14 : (Début Traitement Réel et Fin Traitement)
+=> SELECT avg(hour(timediff(`Fin Traitement`,`Début Traitement Réel`))*60+minute(timediff(`Fin Traitement`,`Début Traitement Réel`))+second(timediff(`Fin Traitement`,`Début Traitement Réel`))/60) FROM `data`
+
+
+
+------RECAP------
+D0 : (Date Disponibilité et Début Traitement)
+=> SELECT avg(hour(timediff(`Début Traitement`,`Date Disponibilité`))*60+minute(timediff(`Début Traitement`,`Date Disponibilité`))+second(timediff(`Début Traitement`,`Date Disponibilité`))/60) FROM `data`
+
+D1 : (Début Traitement et Date pré ciblage)
+=> SELECT avg(hour(timediff(`Date pré ciblage`,`Début Traitement`))*60+minute(timediff(`Date pré ciblage`,`Début Traitement`))+second(timediff(`Date pré ciblage`,`Début Traitement`))/60) FROM `data`
+
+D2 : (Date pré ciblage et Début Traitement pré ciblé)
+=> SELECT avg(hour(timediff(`Début Traitement pré ciblé`,`Date pré ciblage`))*60+minute(timediff(`Début Traitement pré ciblé`,`Date pré ciblage`))+second(timediff(`Début Traitement pré ciblé`,`Date pré ciblage`))/60) FROM `data`
+
+D3 : (Début Traitement pré ciblé et Début Traitement Réel)
+=> SELECT avg(hour(timediff(`Début Traitement Réel`,`Début Traitement pré ciblé`))*60+minute(timediff(`Début Traitement Réel`,`Début Traitement pré ciblé`))+second(timediff(`Début Traitement Réel`,`Début Traitement pré ciblé`))/60) FROM `data`
+
+D4 : (Début Traitement Réel et Fin Traitement)
+=> SELECT avg(hour(timediff(`Fin Traitement`,`Début Traitement Réel`))*60+minute(timediff(`Fin Traitement`,`Début Traitement Réel`))+second(timediff(`Fin Traitement`,`Début Traitement Réel`))/60) FROM `data`
