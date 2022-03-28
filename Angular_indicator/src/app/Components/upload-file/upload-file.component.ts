@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { DataModel } from 'src/app/models/DataModel';
 import { DataServiceService } from 'src/app/Services/data-service.service';
@@ -8,7 +8,7 @@ import { DataServiceService } from 'src/app/Services/data-service.service';
   templateUrl: './upload-file.component.html',
   styleUrls: ['./upload-file.component.scss']
 })
-export class UploadFileComponent implements OnInit {
+export class UploadFileComponent implements OnInit, OnDestroy {
 
   file: any;
   BigData = [];
@@ -24,7 +24,7 @@ export class UploadFileComponent implements OnInit {
     );
     this.dataService.emitData();
 
-    console.log(this.BigData);
+    //console.log(this.BigData);
 
   }
 

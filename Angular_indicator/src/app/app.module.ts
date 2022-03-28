@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UploadFileComponent } from './Components/upload-file/upload-file.component';
 import { DataServiceService } from './Services/data-service.service';
+import { BulletinComponent } from './Components/bulletin/bulletin.component';
 
 const appRoutes: Routes = [
   {
@@ -19,7 +20,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    UploadFileComponent
+    UploadFileComponent,
+    BulletinComponent
   ],
   imports: [
     BrowserModule,
