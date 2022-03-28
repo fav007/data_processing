@@ -23,7 +23,10 @@ export class BulletinComponent implements OnInit {
   }
 
   D1() {
-    console.log(this.BigData['fin_traitement']);
+    //console.log(this.BigData['fin_traitement']);
+    let d1 = this.dataService.getDelay(this.BigData['fin_traitement'], this.BigData['fin_traidate_disponibilitetement']);
+    console.log(d1);
+
   }
 
 }
