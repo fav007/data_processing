@@ -1,7 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { DataModel } from 'src/app/models/DataModel';
-import { DataServiceService } from 'src/app/Services/data-service.service';
+import { DataServiceService } from '../../Services/data-service.service';
 
 @Component({
   selector: 'app-upload-file',
@@ -14,7 +15,7 @@ export class UploadFileComponent implements OnInit, OnDestroy {
   BigData = [];
 
   BigDataSubscription: Subscription;
-  constructor(private dataService: DataServiceService) { }
+  constructor(private dataService: DataServiceService, private routes: Router) { }
 
   ngOnInit(): void {
     this.BigDataSubscription = this.dataService.getData().subscribe(
@@ -24,7 +25,7 @@ export class UploadFileComponent implements OnInit, OnDestroy {
     );
     this.dataService.emitData();
 
-    //console.log(this.BigData);
+    console.log(this.BigData);
 
   }
 
@@ -38,6 +39,7 @@ export class UploadFileComponent implements OnInit, OnDestroy {
 
     if (this.file) {
       this.ReadCSV(this.file);
+      //this.routes.navigate(['/bulletin'])
     }
   }
 
@@ -56,7 +58,7 @@ export class UploadFileComponent implements OnInit, OnDestroy {
       //console.log(dt[0]);
       for (let j = 1; j <= dt.length; j++) {
         let newData = new DataModel(dt[j][0], dt[j][1], dt[j][2], dt[j][3], dt[j][4], dt[j][5], dt[j][6], dt[j][7], dt[j][8], dt[j][9], dt[j][10].trim());
-        console.log(newData);
+        //console.log(newData);
         this.dataService.addData(newData);
         this.dataService.emitData()
       }
